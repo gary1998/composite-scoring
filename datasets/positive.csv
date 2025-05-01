@@ -1,0 +1,51 @@
+reference,generated,human_score
+"I forgot my password, how do I access my account?","You can reset your password by selecting 'Forgot Password'.",0.93
+"Is there a way to talk to someone?","Sure, I can connect you to our customer service team.",0.91
+"I want to return my recent purchase.","Of course, I can help you process your return.",0.88
+"Where do I look for my past invoices?","You can find your billing info in the My Account section.",0.90
+"My parcel hasn't arrived on time.","Apologies, I will check your delivery status immediately.",0.89
+"Can I get a student concession?","Yes, we offer a 10% discount for students.",0.94
+"App doesn’t launch anymore.","Try reinstalling it. That usually solves the problem.",0.87
+"Nothing was delivered even though it says delivered.","I'll raise a ticket to investigate this issue.",0.92
+"Can I get my order shipped to another address?","Yes, you can update your delivery details in settings.",0.90
+"What’s your product refund rule?","You may return items within 30 days.",0.91
+"My promo code is not applying.","Let me check and apply it manually for you.",0.88
+"Do you ship to Europe?","Yes, we ship internationally including to Europe.",0.89
+"I need a refund for a damaged item.","I’ll initiate a refund request right away.",0.92
+"Payment failed but money was deducted.","I’m sorry! I’ll verify and trigger a refund.",0.91
+"How do I upgrade my membership plan?","You can upgrade it via your profile settings.",0.90
+"My tracking hasn't been updated.","Let me check with the courier and get back to you.",0.89
+"I want to update my email address.","Sure! You can edit that in your account settings.",0.90
+"Is there a rewards program?","Yes, we offer loyalty points on every purchase.",0.91
+"Can I buy now and pay later?","We support EMI and pay-later options.",0.93
+"How do I enable two-factor login?","You can activate it under account security settings.",0.89
+"I forgot my username.","You can retrieve it using your registered email.",0.88
+"Are there any new offers?","Yes! Visit our offers page for the latest discounts.",0.90
+"Can I cancel my subscription?","Yes, cancel it anytime from your profile section.",0.89
+"What if I receive the wrong product?","We’ll send you a replacement free of charge.",0.92
+"How do I report a bug in the app?","Please use the in-app 'Report a Problem' option.",0.88
+"I want to change my registered number.","You can update it from your account profile.",0.90
+"Where do I track my return status?","Go to your order history and select the return.",0.91
+"How can I delete my account?","We’ll help you close it from settings.",0.89
+"Can I download a copy of my bill?","Yes, it's available in the order summary.",0.90
+"I need help with the checkout process.","Let me walk you through it.",0.88
+"What are your support hours?","Our team is available 24/7 to assist you.",0.91
+"Where do I enter my discount code?","Use the promo box on the checkout page.",0.89
+"Can I pause my subscription?","Yes, you can pause it temporarily from settings.",0.90
+"I need assistance with product installation.","Sure! Here's a quick setup guide.",0.89
+"Is there a referral program?","Yes, invite friends and earn rewards.",0.91
+"Can I chat instead of calling?","Absolutely! Our live chat is always open.",0.93
+"I want to delete saved payment methods.","Go to Payment Options and remove saved cards.",0.90
+"Can I pick a delivery time slot?","Yes, you can choose a preferred delivery window.",0.91
+"My order is missing an item.","I’ll raise a request for the missing item now.",0.92
+"How do I get early access to deals?","Enable notifications and subscribe to our newsletter.",0.90
+"I want to change my shipping method.","You can do that before the order is shipped.",0.88
+"What’s your customer grievance policy?","We take complaints seriously and resolve them quickly.",0.89
+"How do I resubscribe after cancellation?","Just go to plans and click 'Resubscribe'.",0.91
+"Do you offer GST invoices?","Yes, enter your GST details during checkout.",0.89
+"Is there a charge for COD?","COD is free on orders above ₹500.",0.90
+"I want my order delivered faster.","Choose express shipping at checkout.",0.91
+"Can I talk to a human agent?","Sure, transferring you to a support specialist now.",0.92
+"My return window has closed, can I still return?","We’ll make an exception and help you return it.",0.89
+"How do I remove an item from my cart?","Tap the trash icon next to the item in your cart.",0.88
+"Why was I charged twice?","That looks like a duplicate, I’ll reverse the extra charge.",0.90

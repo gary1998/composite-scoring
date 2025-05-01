@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 2: Preview Data</title>
+    <style>
+      /* Base reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        background: #f2f5f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        background: #2980b9;
+        color: #fff;
+        font-size: 1.8em;
+      }
+      .content {
+        padding: 20px;
+      }
+      .content p {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #555;
+      }
+
+      .table-wrapper {
+        max-height: 500px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      /* Styling for the data table */
+      table.table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table.table th,
+      table.table td {
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 14px;
+      }
+      table.table th {
+        position: sticky;
+        top: 0;
+        background: #34495e;
+        color: #fff;
+        font-weight: 600;
+        border-bottom: 2px solid #2c3e50;
+        z-index: 2;
+      }
+      table.table tr:nth-child(even) td {
+        background: #f9f9f9;
+      }
+      table.table tr:hover td {
+        background: #ecf0f1;
+      }
+
+      /* Zebra striping with Bootstrap's table-striped */
+      table.table-striped tr:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+
+      table.table-striped tr:hover {
+        background-color: #ecf0f1;
+      }
+
+      .btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 12px 24px;
+        background: #27ae60;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1em;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .btn:hover {
+        background: #1e874b;
+      }
+
+      /* Sticky Home Button */
+      .sticky-home {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.2s ease;
+      }
+      .sticky-home:hover {
+        background: #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        z-index: 1000;
+        max-width: 320px;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <!-- Top row with logos and name -->
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        "
+      >
+        <img
+          src="https://miet.ac.in/icammia-2023/images/MIET_logo.png"
+          alt="MIET Logo"
+          style="width: 42px; height: 42px; object-fit: contain"
+        />
+
+        <div style="text-align: center; flex-grow: 1">
+          <strong style="font-size: 1em">Gaurav Goswami</strong><br />
+          <span style="font-size: 0.85em">M.Tech @ MIET, Meerut</span>
+        </div>
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/9/98/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png"
+          alt="AKTU Logo"
+          style="width: 42px; height: 42px; object-fit: contain"
+        />
+      </div>
+
+      <!-- Additional info -->
+      <div style="text-align: center">
+        Roll No: <strong>2300680105005</strong><br />
+        Thesis:
+        <em
+          >"A Comparative Study of Evaluation Metrics for Conversational AI:
+          Toward a Unified Framework"</em
+        >
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Step 2: Preview Dataset</h1>
+      <div class="content">
+        <p>
+          Below is your full conversation dataset. Scroll to review all entries
+          and ensure your columns are correct before proceeding.
+        </p>
+        <div class="table-wrapper">
+          <!-- Jinja will render the table with applied Bootstrap classes -->
+          {% for table in tables %} {{ table|safe }} {% endfor %}
+        </div>
+        <a href="{{ url_for('step3') }}" class="btn"
+          >Proceed to Compute Scores →</a
+        >
+      </div>
+    </div>
+
+    <button class="sticky-home" onclick="location.href='/'">🏠 Home</button>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversational AI Evaluation Wizard</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 40px 20px 80px;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        font-size: 2.2em;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1em;
+        color: #666;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      section {
+        background: #fff;
+        padding: 25px 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      section h2 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      section ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
+
+      section ul li {
+        margin-bottom: 8px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.95em;
+        color: #555;
+      }
+
+      .btn-start {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        transition: background 0.3s ease;
+      }
+
+      .btn-start:hover {
+        background-color: #1a252f;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        z-index: 1000;
+        max-width: 320px;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        "
+      >
+        <img
+          src="https://miet.ac.in/icammia-2023/images/MIET_logo.png"
+          alt="MIET Logo"
+          style="width: 42px; height: 42px; object-fit: contain"
+        />
+
+        <div style="text-align: center; flex-grow: 1">
+          <strong style="font-size: 1em">Gaurav Goswami</strong><br />
+          <span style="font-size: 0.85em">M.Tech @ MIET, Meerut</span>
+        </div>
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/9/98/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png"
+          alt="AKTU Logo"
+          style="width: 42px; height: 42px; object-fit: contain"
+        />
+      </div>
+
+      <!-- Additional info -->
+      <div style="text-align: center">
+        Roll No: <strong>2300680105005</strong><br />
+        Thesis:
+        <em
+          >"A Comparative Study of Evaluation Metrics for Conversational AI:
+          Toward a Unified Framework"</em
+        >
+      </div>
+    </div>
+
+    <div class="container">
+      <header>
+        <h1>Conversational AI Evaluation Wizard</h1>
+        <p><em>From Metrics to Meaningful Insights</em></p>
+        <img
+          src="https://www.cxtoday.com/wp-content/uploads/2022/03/Conversational-AI.jpg"
+          alt="Conversational AI Illustration"
+        />
+      </header>
+
+      <section>
+        <h2>📌 About the Project</h2>
+        <p>
+          This project is part of a master's thesis titled
+          <strong
+            >“A Comparative Study of Evaluation Metrics for Conversational AI:
+            Toward a Unified Framework”</strong
+          >. The tool aims to bridge the disconnect between traditional
+          automatic evaluation metrics like BLEU, ROUGE, and METEOR, and real
+          human judgment when assessing AI-generated conversational responses.
+        </p>
+        <p>
+          To address this, we introduce a
+          <strong>composite scoring framework</strong> that intelligently blends
+          these traditional metrics with human feedback to deliver a more
+          reliable, semantically-aware, and human-aligned evaluation.
+        </p>
+      </section>
+
+      <section>
+        <h2>🎯 Why Was This Needed?</h2>
+        <ul>
+          <li>
+            <strong>BLEU</strong> penalizes paraphrasing and neglects meaning.
+          </li>
+          <li>
+            <strong>ROUGE</strong> focuses on recall but may ignore fluency.
+          </li>
+          <li>
+            <strong>METEOR</strong> captures synonyms but remains surface-level.
+          </li>
+          <li>
+            <strong>Human feedback</strong> is essential, but not scalable on
+            its own.
+          </li>
+        </ul>
+        <p>
+          The proposed <strong>Composite Score</strong> merges automated scores
+          and human ratings using configurable weights (α and β), ensuring
+          outputs are not just linguistically similar — but also contextually
+          and semantically appropriate.
+        </p>
+      </section>
+
+      <section>
+        <h2>🔍 What the App Does</h2>
+        <ol>
+          <li>
+            <strong>Step 1:</strong> Upload your dataset or generate a sample
+            file.
+          </li>
+          <li>
+            <strong>Step 2:</strong> Preview and validate the reference-response
+            pairs.
+          </li>
+          <li>
+            <strong>Step 3:</strong> Compute BLEU, ROUGE-L, METEOR, and
+            Composite Scores.
+          </li>
+          <li>
+            <strong>Step 4:</strong> Explore intuitive visualizations (averages,
+            correlations, PR curves, and more).
+          </li>
+        </ol>
+        <p>
+          This step-by-step wizard helps developers, researchers, and linguists
+          assess the quality of AI-generated conversations from both technical
+          and human-centric perspectives.
+        </p>
+      </section>
+
+      <section>
+        <h2>📊 Visual Dashboard Highlights</h2>
+        <ul>
+          <li>
+            <strong>📊 Average Scores:</strong> See how each metric behaves
+            across the dataset.
+          </li>
+          <li>
+            <strong>📈 Correlation:</strong> Check how closely each metric
+            reflects human scores.
+          </li>
+          <li>
+            <strong>📉 Score Variability:</strong> Measure consistency across
+            responses.
+          </li>
+          <li>
+            <strong>🎯 Precision-Recall:</strong> Detect a metric’s ability to
+            catch high-quality outputs.
+          </li>
+          <li>
+            <strong>📐 Delta Histogram:</strong> Understand how much the
+            composite improves over traditional scores.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📘 Research Contribution</h2>
+        <p>
+          This project presents a practical implementation of the research
+          thesis:
+          <strong
+            >“A Comparative Study of Evaluation Metrics for Conversational AI:
+            Toward a Unified Framework”</strong
+          >.
+        </p>
+        <p>
+          It contributes a scalable, explainable, and extensible framework that
+          unifies automated evaluation with human-aligned reasoning. It also
+          lays the foundation for future integration of advanced techniques like
+          BERTScore, RLHF, and context-awareness evaluation.
+        </p>
+        <p>
+          As a dual-purpose toolkit, it serves both academic validation and
+          practical auditing of dialogue systems.
+        </p>
+      </section>
+    </div>
+
+    <button class="btn-start" onclick="location.href='/step1'">
+      🚀 Get Started
+    </button>
+  </body>
+</html>

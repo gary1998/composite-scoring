@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 4: Comprehensive Visualization</title>
+    <style>
+      /* Reset & Base Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        background: #f2f5f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto 80px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+      h1 {
+        background: #2980b9;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.8em;
+        margin-bottom: 0;
+      }
+      .tabs {
+        display: flex;
+        list-style: none;
+        background: #ecf0f1;
+        margin: 0;
+        overflow-x: auto;
+      }
+      .tabs li {
+        flex: 1;
+      }
+      .tabs a {
+        display: block;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        color: #34495e;
+        border-bottom: 3px solid transparent;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .tabs a.active {
+        background: #fff;
+        border-color: #2980b9;
+        color: #2980b9;
+        font-weight: bold;
+      }
+      .tab-content {
+        display: none;
+        padding: 20px;
+        background: #fff;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      /* Table styling */
+      .table-wrapper {
+        max-height: 450px;
+        overflow-y: auto;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      table.table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 800px;
+      }
+      table.table th,
+      table.table td {
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+      table.table th {
+        background: #34495e;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      table.table tr:nth-child(even) td {
+        background: #f9f9f9;
+      }
+      table.table tr:hover td {
+        background: #ecf0f1;
+      }
+      /* Charts */
+      .chart {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .chart img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      /* Restart button */
+      .btn-restart {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.2s;
+      }
+      .btn-restart:hover {
+        background: #c0392b;
+      }
+      /* Explanation styling */
+      .explanation {
+        background: #ecf0f1;
+        border-left: 4px solid #2980b9;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+      .explanation ul {
+        margin-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        z-index: 1000;
+        max-width: 320px;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <!-- Top row with logos and name -->
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        "
+      >
+        <img
+          src="https://miet.ac.in/icammia-2023/images/MIET_logo.png"
+          alt="MIET Logo"
+          style="width: 42px; height: 42px; object-fit: contain"
+        />
+
+        <div style="text-align: center; flex-grow: 1">
+          <strong style="font-size: 1em">Gaurav Goswami</strong><br />
+          <span style="font-size: 0.85em">M.Tech @ MIET, Meerut</span>
+        </div>
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/9/98/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png"
+          alt="AKTU Logo"
+          style="width: 42px; height: 42px; object-fit: contain"
+        />
+      </div>
+
+      <!-- Additional info -->
+      <div style="text-align: center">
+        Roll No: <strong>2300680105005</strong><br />
+        Thesis:
+        <em
+          >"A Comparative Study of Evaluation Metrics for Conversational AI:
+          Toward a Unified Framework"</em
+        >
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Step 4: Comprehensive Visualization</h1>
+
+      <!-- Tab Navigation -->
+      <ul class="tabs">
+        <li>
+          <a href="#" data-tab="final" class="active">📋 Final Results</a>
+        </li>
+        <li><a href="#" data-tab="avg">📊 Average Scores</a></li>
+        <li><a href="#" data-tab="corr">📈 Correlation</a></li>
+        <li><a href="#" data-tab="var">📉 Variability</a></li>
+        <li><a href="#" data-tab="pr">🎯 Precision-Recall</a></li>
+        <li><a href="#" data-tab="delta">📐 Delta Histogram</a></li>
+      </ul>
+
+      <!-- Final Results -->
+      <div id="final" class="tab-content active">
+        <h2>📋 Final Evaluation Results</h2>
+        <div class="table-wrapper">
+          <table class="table">
+            <thead style="background-color: #f0f0f0">
+              <tr>
+                <th>Reference</th>
+                <th>Response</th>
+                <th>BLEU</th>
+                <th>ROUGE</th>
+                <th>METEOR</th>
+                <th>Human Score</th>
+                <th>Composite</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in final_df %}
+              <tr>
+                <td>{{ row['reference'] }}</td>
+                <td>{{ row['generated'] }}</td>
+                <td>{{ "%.2f"|format(row['BLEU']) }}</td>
+                <td>{{ "%.2f"|format(row['ROUGE-L']) }}</td>
+                <td>{{ "%.2f"|format(row['METEOR']) }}</td>
+                <td>{{ "%.2f"|format(row['human_score']) }}</td>
+                <td
+                  style="
+                  background-color: {% if row['COMPOSITE'] > row['auto_avg'] %}lightgreen
+                                    {% elif row['COMPOSITE'] < row['auto_avg'] %}lightcoral
+                                    {% else %}#eee{% endif %};
+                  font-weight: bold;"
+                >
+                  {{ "%.2f"|format(row['COMPOSITE']) }}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="explanation">
+          <strong>What it depicts:</strong>
+          A row-by-row display of every <em>reference</em> and
+          <em>generated</em> pair alongside their BLEU, ROUGE-L, METEOR, human,
+          and Composite scores.<br />
+          <strong>Why it’s needed:</strong>
+          Shows raw data comparisons and spots exactly which responses the
+          Composite score boosts or penalizes relative to traditional
+          metrics.<br />
+          <strong>How to read:</strong>
+          Check each colored cell—&nbsp;<span style="background: lightgreen">
+            GREEN </span
+          >&nbsp;means Composite &gt;= average(BLEU,ROUGE,METEOR),&nbsp;<span
+            style="background: lightcoral"
+          >
+            RED </span
+          >&nbsp;means Composite &lt; average.<br />
+          <strong>Best vs. Worst:</strong>
+          The highest Composite values (close to 1.00) indicate near-perfect,
+          human-aligned responses. The lowest Composite values (below 0.50) flag
+          poor matches, even if BLEU/ROUGE may be misleadingly high.
+        </div>
+      </div>
+
+      <!-- Average Scores -->
+      <div id="avg" class="tab-content">
+        <h2>📊 Average Metric Scores</h2>
+        <div class="chart">
+          <img src="{{ chart_avg }}" alt="Average Scores" />
+        </div>
+        <div class="explanation">
+          <strong>What it depicts:</strong>
+          A bar chart of the mean scores for BLEU, ROUGE-L, METEOR, and
+          Composite across all samples.<br />
+          <strong>Why it’s needed:</strong>
+          Provides a quick overview of each metric’s overall performance.<br />
+          <strong>How to read:</strong>
+          Taller bars = higher average score. Composite’s bar should be highest
+          if it consistently aligns with human judgment.<br />
+          <strong>Best vs. Worst:</strong>
+          The peak bar shows which metric scores closest to perfect (1.00) on
+          average; the shortest indicates the least reliable.
+        </div>
+      </div>
+
+      <!-- Correlation -->
+      <div id="corr" class="tab-content">
+        <h2>📈 Correlation with Human Judgments</h2>
+        <div class="chart">
+          <img src="{{ chart_corr }}" alt="Correlation" />
+        </div>
+        <div class="explanation">
+          <strong>What it depicts:</strong>
+          Pearson’s correlation coefficient between each metric and human
+          scores.<br />
+          <strong>Why it’s needed:</strong>
+          Measures how well each metric agrees with human evaluation.<br />
+          <strong>How to read:</strong>
+          Values range from -1 to +1—closer to +1 is better alignment. Composite
+          should approach +1.<br />
+          <strong>Best vs. Worst:</strong>
+          The highest correlation (e.g., Composite ~0.9) shows the most
+          human-like metric; the lowest (e.g., BLEU ~0.5) shows weakness.
+        </div>
+      </div>
+
+      <!-- Variability -->
+      <div id="var" class="tab-content">
+        <h2>📉 Score Variability (Standard Deviation)</h2>
+        <div class="chart"><img src="{{ chart_var }}" alt="Variability" /></div>
+        <div class="explanation">
+          <strong>What it depicts:</strong>
+          Standard deviation of each metric’s scores across the dataset.<br />
+          <strong>Why it’s needed:</strong>
+          Indicates consistency—lower variability is preferable.<br />
+          <strong>How to read:</strong>
+          Shorter bars = more stable metric. Composite should have one of the
+          shortest bars.<br />
+          <strong>Best vs. Worst:</strong>
+          The metric with the smallest SD is most predictable; the largest SD is
+          least reliable.
+        </div>
+      </div>
+
+      <!-- Precision-Recall -->
+      <div id="pr" class="tab-content">
+        <h2>🎯 Precision-Recall Curve</h2>
+        <div class="chart">
+          <img src="{{ chart_pr }}" alt="Precision-Recall" />
+        </div>
+        <div class="explanation">
+          <strong>What it depicts:</strong>
+          Precision vs. recall trade-off for identifying high-quality responses
+          (human_score ≥ 0.7).<br />
+          <strong>Why it’s needed:</strong>
+          Evaluates how well a metric selects top responses without too many
+          false positives.<br />
+          <strong>How to read:</strong>
+          Curve closer to the top-right corner is better. AUC (Area Under Curve)
+          quantifies overall performance.<br />
+          <strong>Best vs. Worst:</strong>
+          The highest AUC indicates the best metric; the lowest AUC shows poor
+          discrimination.
+        </div>
+      </div>
+
+      <!-- Delta Histogram -->
+      <div id="delta" class="tab-content">
+        <h2>📐 Delta Histogram</h2>
+        <div class="chart">
+          <img src="{{ chart_delta }}" alt="Delta Histogram" />
+        </div>
+        <div class="explanation">
+          <strong>What it depicts:</strong>
+          Distribution of (Composite – average(BLEU,ROUGE,METEOR)) across all
+          samples.<br />
+          <strong>Why it’s needed:</strong>
+          Shows how often, and by how much, Composite corrects or underperforms
+          relative to traditional metrics.<br />
+          <strong>How to read:</strong>
+          Bars right of zero = Composite > traditional average; left of zero =
+          Composite < average.<br />
+          <strong>Best vs. Worst:</strong>
+          A strong right-skew and positive mean delta indicate consistent
+          Composite improvements.
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-restart" onclick="location.href='/'">
+      🔄 Restart Wizard
+    </button>
+
+    <script>
+      document.querySelectorAll(".tabs a").forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          e.preventDefault();
+          const tgt = tab.getAttribute("data-tab");
+          document
+            .querySelectorAll(".tabs a")
+            .forEach((t) => t.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((c) => c.classList.remove("active"));
+          tab.classList.add("active");
+          document.getElementById(tgt).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
