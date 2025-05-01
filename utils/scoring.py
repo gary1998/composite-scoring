@@ -43,7 +43,12 @@ def compute_all_scores(df: pd.DataFrame) -> pd.DataFrame:
 
         # Composite weighted average
         auto_avg = (bleu + rouge_l + meteor) / 3
-        composite = 0.4 * auto_avg + 0.6 * human_score
+        
+        # Weights for composite score
+        # Adjust these weights based on your preference
+        alpha = 0.4
+        beta = 0.6
+        composite = alpha * auto_avg + beta * human_score
 
         # Append scores
         bleu_list.append(bleu)

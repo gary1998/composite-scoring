@@ -15,6 +15,10 @@ from werkzeug.utils import secure_filename
 from utils.scoring import compute_all_scores
 from utils.visuals import plot_delta_histogram, plot_metric_correlations, plot_precision_recall, plot_score_variability
 
+import nltk
+nltk.download('punkt_tab')
+nltk.download('wordnet')
+
 # Initialize Flask app and configuration
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET', 'a_secure_default_key')  # Use env var in production
@@ -140,5 +144,6 @@ def step4():
 
 
 if __name__ == '__main__':
+    port = os.getenv('PORT', 5000)
     # Run Flask development server
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)

@@ -1,0 +1,6 @@
+flask
+pandas
+nltk
+rouge_score
+matplotlib
+scikit-learn
